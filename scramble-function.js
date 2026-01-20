@@ -1,4 +1,3 @@
-// The First Amendment text
 const firstAmendment = "Congress shall make no law respecting an establishment of religion, or prohibiting the free exercise thereof; or abridging the freedom of speech, or of the press; or the right of the people peaceably to assemble, and to petition the Government for a redress of grievances.";
 
 // Function to scramble the words in the text
@@ -18,11 +17,10 @@ function scrambleWords(text) {
 
 // Wait for DOM to load
 document.addEventListener('DOMContentLoaded', function() {
-    const scrambleBtn = document.getElementById('scrambleBtn');
     const scrambledDiv = document.getElementById('scrambled');
     
-    // Add click event listener to the button
-    scrambleBtn.addEventListener('click', function() {
+    // Function to update the scrambled text
+    function updateScrambledText() {
         const scrambled = scrambleWords(firstAmendment);
         scrambledDiv.textContent = scrambled;
         
@@ -31,8 +29,11 @@ document.addEventListener('DOMContentLoaded', function() {
         setTimeout(() => {
             scrambledDiv.style.animation = '';
         }, 10);
-    });
+    }
     
     // Scramble once on page load
-    scrambledDiv.textContent = scrambleWords(firstAmendment);
+    updateScrambledText();
+    
+    // Scramble every 30 seconds (30000 milliseconds)
+    setInterval(updateScrambledText, 30000);
 });

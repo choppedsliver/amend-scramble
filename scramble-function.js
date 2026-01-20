@@ -25,15 +25,14 @@ document.addEventListener('DOMContentLoaded', function() {
         scrambledDiv.textContent = scrambled;
         
         // Add animation class
-        scrambledDiv.style.animation = 'none';
-        setTimeout(() => {
-            scrambledDiv.style.animation = '';
-        }, 10);
+        // scrambledDiv.style.animation = 'none';
+        // setTimeout(() => {
+        //     scrambledDiv.style.animation = '';
+        // }, 10);
     }
     
     // Scramble once on page load
     updateScrambledText();
-    
-    // Scramble every 30 seconds (30000 milliseconds)
-    setInterval(updateScrambledText, 30000);
+
+    setInterval(updateScrambledText, 5000);
 });

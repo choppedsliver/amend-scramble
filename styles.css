@@ -1,0 +1,139 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    width: 100%;
+    padding: 40px;
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #555;
+    margin: 20px 0 10px 0;
+    font-size: 1.5em;
+}
+
+.content {
+    margin: 20px 0;
+}
+
+.text-box {
+    background: #f8f9fa;
+    border: 2px solid #dee2e6;
+    border-radius: 10px;
+    padding: 20px;
+    font-size: 1.1em;
+    line-height: 1.8;
+    color: #333;
+    min-height: 100px;
+    margin-bottom: 20px;
+}
+
+.text-box.original {
+    background: #e3f2fd;
+    border-color: #90caf9;
+}
+
+.text-box.scrambled {
+    background: #fff3e0;
+    border-color: #ffb74d;
+    font-weight: 500;
+    animation: pulse 0.5s ease-in;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.scramble-btn {
+    display: block;
+    width: 100%;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.scramble-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.scramble-btn:active {
+    transform: translateY(0);
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 2px solid #dee2e6;
+    color: #666;
+    font-style: italic;
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    .text-box {
+        font-size: 1em;
+        padding: 15px;
+    }
+}

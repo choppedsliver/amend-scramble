@@ -6,7 +6,6 @@
 
 body {
     font-family: 'Georgia', serif;
-    /* background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); */
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -53,9 +52,6 @@ h2 {
 }
 
 .text-box {
-    /* background: #f8f9fa; */
-    /* border: 2px solid #dee2e6; */
-    /* border-radius: 10px; */
     padding: 20px;
     font-size: 1.1em;
     line-height: 1.8;
@@ -64,26 +60,8 @@ h2 {
     margin-bottom: 20px;
 }
 
-/* .text-box.original {
-    background: #e3f2fd;
-    border-color: #90caf9;
-} */
-
 .text-box.scrambled {
     font-weight: 500;
-    animation: pulse 0.5s ease-in;
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.02);
-    }
-    100% {
-        transform: scale(1);
-    }
 }
 
 @media (max-width: 600px) {
